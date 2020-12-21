@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Money || Banking</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(3, 226, 178);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <label for="users">Choose user to send money:</label>
+
+      <select id="users">
+        <% for ( var i = 0; i < users.length; i++ ) 
+            { var selected = ( users.name == i ) ? "selected" : ""; %>
+            <option value="<%=users[i].name %>" <%="selected" %>><%=users[i].name %></option>
+        <% } %>
+      </select>
+    </div>
+  </body>
+  <script>
+    const handleChange = () => {
+      console.log(changed);
+    };
+  </script>
+</html>

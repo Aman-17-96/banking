@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users || Banking</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(3, 226, 178);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .heading {
+        position: absolute;
+        top: 10px;
+        margin: auto;
+      }
+      .container {
+        width: 70%;
+        height: 70vh;
+        /* border: 2px solid black; */
+        overflow: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .container::-webkit-scrollbar {
+        display: none;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        background-color: white;
+        width: 100%;
+        margin: 2px;
+        padding: 5px;
+        display: flex;
+      }
+      li p {
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">All the users</div>
+    <div class="container">
+      <ul>
+        <% users.forEach(user=>{%>
+        <li>
+          <p><%=user.id%></p>
+          <p><%=user.name%></p>
+          <p><%=user.balance%>/-</p>
+        </li>
+        <%});%>
+      </ul>
+    </div>
+  </body>
+</html>
